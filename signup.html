@@ -7,6 +7,7 @@
     <title>Create Account | Cosmo Audio</title>
     <link rel="icon" type="icon/png" href="./assets/img/logo.png">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         body {
@@ -47,17 +48,43 @@
 </head>
 
 <body class="antialiased flex items-center justify-center min-h-screen p-6">
+    <!-- Unique Header for Auth Pages -->
+    <nav class="fixed top-0 w-full z-50 px-6 py-4 bg-black backdrop-blur-md shadow-sm">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="text-2xl font-bold tracking-tighter white flex items-center gap-2"> <a href="index.html">
+                    COSMO<span class="text-blue-500">.</span>
+                </a></div>
+
+            <a href="index.html"
+                class="flex items-center gap-2 text-gray-400 hover:text-white transition font-semibold group">
+                <i class="fas fa-arrow-left text-sm group-hover:-translate-x-1 transition"></i>
+                Back to Home
+            </a>
+        </div>
+    </nav>
+
 
     <div
         class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-blue-600/5 blur-[120px] rounded-full -z-10">
     </div>
 
-    <main class="w-full max-w-md">
+    <main class="w-full max-w-md mt-16">
         <div class="text-center mb-8">
             <h1 class="text-3xl font-bold tracking-tight mb-2">Create an Account</h1>
             <p class="text-gray-400 font-light text-sm">Join us for a better audio experience.</p>
         </div>
+        <button
+            class="w-full flex items-center justify-center gap-3 py-3 px-4 border border-slate-200 rounded-xl hover:bg-slate-50 transition font-semibold text-white mb-6">
+            <img src="https://www.svgrepo.com/show/355037/google.svg" class="w-5 h-5" alt="Google">
+            Sign up with Google
+        </button>
 
+        <div class="relative flex items-center justify-center mb-8">
+            <div class="border-t border-slate-100 w-full"></div>
+            <span
+                class="bg-black px-4 text-xs text-white border border-slate-100 rounded-full uppercase tracking-widest absolute">Or
+            </span>
+        </div>
         <div class="glass-card p-8 rounded-[2.5rem] shadow-2xl">
             <form id="signupForm" class="space-y-5">
 
@@ -76,8 +103,14 @@
 
                 <div class="space-y-1">
                     <label class="text-[11px] font-bold uppercase tracking-widest text-gray-500 ml-1">Password</label>
-                    <input type="password" id="password" name="password" required placeholder="••••••••"
-                        class="input-field w-full p-4 rounded-xl text-white text-sm">
+                    <div class="relative">
+                        <input type="password" id="password" name="password" required placeholder="••••••••"
+                            class="input-field w-full p-4 rounded-xl text-white text-sm">
+                        <button type="button" onclick="togglePassword('password', 'toggleIcon_password')"
+                            class="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 hover:text-white">
+                            <i class="far fa-eye" id="toggleIcon_password"></i>
+                        </button>
+                    </div>
                     <div class="px-1 mt-2">
                         <div class="strength-meter w-0" id="strengthMeter"></div>
                         <p class="text-[10px] text-gray-500 mt-1">Use 8+ characters with mixed symbols.</p>
@@ -87,8 +120,14 @@
                 <div class="space-y-1">
                     <label class="text-[11px] font-bold uppercase tracking-widest text-gray-500 ml-1">Confirm
                         Password</label>
-                    <input type="password" name="confirm_password" required placeholder="••••••••"
-                        class="input-field w-full p-4 rounded-xl text-white text-sm">
+                    <div class="relative">
+                        <input type="password" id="confirm_password" name="confirm_password" required
+                            placeholder="••••••••" class="input-field w-full p-4 rounded-xl text-white text-sm">
+                        <button type="button" onclick="togglePassword('confirm_password', 'toggleIcon_confirm')"
+                            class="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 hover:text-white">
+                            <i class="far fa-eye" id="toggleIcon_confirm"></i>
+                        </button>
+                    </div>
                 </div>
 
                 <div class="space-y-1">
@@ -149,6 +188,19 @@
             localStorage.setItem('isLoggedIn', 'true');
             window.location.href = 'index.html';
         });
+        function togglePassword(fieldId, iconId) {
+            const field = document.getElementById(fieldId);
+            const icon = document.getElementById(iconId);
+            if (field.type === 'password') {
+                field.type = 'text';
+                icon.classList.remove('fa-eye');
+                icon.classList.add('fa-eye-slash');
+            } else {
+                field.type = 'password';
+                icon.classList.remove('fa-eye-slash');
+                icon.classList.add('fa-eye');
+            }
+        }
     </script>
 </body>
 

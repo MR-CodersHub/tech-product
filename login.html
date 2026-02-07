@@ -7,6 +7,7 @@
     <title>Login | Cosmo Audio</title>
     <link rel="icon" type="icon/png" href="./assets/img/logo.png">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         body {
@@ -40,12 +41,22 @@
 </head>
 
 <body class="antialiased flex items-center justify-center min-h-screen p-6">
+    <!-- Unique Header for Auth Pages -->
+    <nav class="fixed top-0 w-full z-50 px-6 py-4 bg-black backdrop-blur-md shadow-sm">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="text-2xl font-bold tracking-tighter white flex items-center gap-2"> <a href="index.html">
+                    COSMO<span class="text-blue-500">.</span>
+                </a></div>
 
-    <div
-        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-blue-600/5 blur-[120px] rounded-full -z-10">
-    </div>
+            <a href="index.html"
+                class="flex items-center gap-2 text-gray-400 hover:text-white transition font-semibold group">
+                <i class="fas fa-arrow-left text-sm group-hover:-translate-x-1 transition"></i>
+                Back to Home
+            </a>
+        </div>
+    </nav>
 
-    <main class="w-full max-w-md">
+    <main class="w-full max-w-md mt-16">
         <div class="text-center mb-10">
             <h1 class="text-3xl font-bold tracking-tight mb-2">Welcome Back</h1>
             <p class="text-gray-400 font-light text-sm">Sign in to your account</p>
@@ -67,8 +78,14 @@
                         <a href="forgot-password.html"
                             class="text-[11px] font-bold text-blue-500 hover:text-blue-400 transition">Forgot?</a>
                     </div>
-                    <input type="password" name="password" required placeholder="••••••••"
-                        class="input-field w-full p-4 rounded-xl text-white text-sm">
+                    <div class="relative">
+                        <input type="password" id="password" name="password" required placeholder="••••••••"
+                            class="input-field w-full p-4 rounded-xl text-white text-sm">
+                        <button type="button" onclick="togglePassword('password', 'toggleIcon_password')"
+                            class="absolute right-4 top-1/2 -translate-y-1/2 text-slate-600 hover:text-white">
+                            <i class="far fa-eye" id="toggleIcon_password"></i>
+                        </button>
+                    </div>
                 </div>
 
                 <div class="flex items-center gap-3 py-1">
@@ -147,6 +164,20 @@
                 window.location.href = 'index.html';
             }
         });
+
+        function togglePassword(fieldId, iconId) {
+            const field = document.getElementById(fieldId);
+            const icon = document.getElementById(iconId);
+            if (field.type === 'password') {
+                field.type = 'text';
+                icon.classList.remove('fa-eye');
+                icon.classList.add('fa-eye-slash');
+            } else {
+                field.type = 'password';
+                icon.classList.remove('fa-eye-slash');
+                icon.classList.add('fa-eye');
+            }
+        }
     </script>
 </body>
 
