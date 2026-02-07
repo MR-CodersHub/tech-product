@@ -7,14 +7,57 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function initNavbar() {
+    console.log('initNavbar called');
+
     // Mobile Menu Toggle
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenuClose = document.getElementById('mobile-menu-close');
     const mobileMenu = document.getElementById('mobile-menu');
 
+    console.log('Mobile menu elements:', {
+        btn: mobileMenuBtn,
+        close: mobileMenuClose,
+        menu: mobileMenu,
+        menuClasses: mobileMenu?.className,
+        menuDisplay: mobileMenu ? window.getComputedStyle(mobileMenu).display : 'N/A',
+        menuZIndex: mobileMenu ? window.getComputedStyle(mobileMenu).zIndex : 'N/A'
+    });
+
     if (mobileMenuBtn && mobileMenu) {
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
+        console.log('Adding click listener to hamburger button');
+        mobileMenuBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            console.log('Hamburger clicked! Current classes:', mobileMenu.className);
+            console.log('Before - Display:', window.getComputedStyle(mobileMenu).display);
+            console.log('Before - Visibility:', window.getComputedStyle(mobileMenu).visibility);
+            console.log('Before - Opacity:', window.getComputedStyle(mobileMenu).opacity);
+
+            mobileMenu.classList.remove('hidden');
+            mobileMenu.style.display = 'block'; // Explicitly set display
+
+            console.log('After removing hidden:', mobileMenu.className);
+            console.log('After - Display:', window.getComputedStyle(mobileMenu).display);
+            console.log('After - Visibility:', window.getComputedStyle(mobileMenu).visibility);
+            console.log('After - Opacity:', window.getComputedStyle(mobileMenu).opacity);
+
+            document.body.style.overflow = 'hidden'; // Prevent background scroll
         });
+
+        // Close button handler
+        if (mobileMenuClose) {
+            console.log('Adding click listener to close button');
+            mobileMenuClose.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                console.log('Close button clicked!');
+                mobileMenu.classList.add('hidden');
+                mobileMenu.style.display = 'none'; // Explicitly hide
+                document.body.style.overflow = ''; // Restore scroll
+            });
+        }
+    } else {
+        console.error('Mobile menu elements not found!', { mobileMenuBtn, mobileMenu });
     }
 
     // Auth Logic

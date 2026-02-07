@@ -158,38 +158,56 @@
             </svg>
         </button>
     </div>
-
-    <!-- Mobile Menu (Hidden by default) -->
-    <div id="mobile-menu" class="hidden fixed inset-0 bg-[#0a0a0a] z-40 pt-24 px-6 overflow-y-auto">
-        <div class="flex flex-col space-y-6 text-lg">
-            <div class="border-b border-white/10 pb-4">
-                <h5 class="text-xs uppercase tracking-widest text-gray-500 mb-4">Collections</h5>
-                <div class="grid grid-cols-2 gap-4">
-                    <a href="./category1.html" class="text-sm text-gray-300 hover:text-white">Wired Series</a>
-                    <a href="./category2.html" class="text-sm text-gray-300 hover:text-white">Earpods</a>
-                    <a href="./category3.html" class="text-sm text-gray-300 hover:text-white">Bluetooth</a>
-                    <a href="./category4.html" class="text-sm text-gray-300 hover:text-white">Headphones</a>
-                </div>
-            </div>
-
-            <a href="./products.html" class="border-b border-white/10 pb-4 text-gray-300 hover:text-white">Products</a>
-            <a href="./bestseller.html" class="border-b border-white/10 pb-4 text-gray-300 hover:text-white">Best
-                Sellers</a>
-            <a href="./about.html"
-                class="border-b border-white/10 pb-4 text-gray-300 hover:text-white font-bold text-white">About Us</a>
-            <a href="./contact.html" class="border-b border-white/10 pb-4 text-gray-300 hover:text-white">Contact</a>
-
-            <!-- Mobile Auth Section -->
-            <div id="auth-mobile" class="pt-2">
-                <!-- Injected by JS -->
-            </div>
-
-            <a href="./booking.html"
-                class="w-full py-4 bg-blue-600 rounded-xl text-center font-bold hover:bg-blue-700 transition mt-4">Order
-                Now</a>
-        </div>
-    </div>
 </nav>
+
+<!-- Mobile Menu (Hidden by default) - Moved outside nav -->
+<div id="mobile-menu" class="hidden fixed inset-0 bg-[#0a0a0a] z-[9999] pt-20 px-6 overflow-y-auto">
+    <!-- Close Button -->
+    <button id="mobile-menu-close" class="absolute top-6 right-6 text-gray-400 hover:text-white z-[10000]">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+    </button>
+
+    <div class="flex flex-col space-y-6 text-lg">
+        <div class="border-b border-white/10 pb-4">
+            <h5 class="text-xs uppercase tracking-widest text-gray-500 mb-4">Collections</h5>
+            <div class="grid grid-cols-2 gap-4">
+                <a href="./category1.html" class="text-sm text-gray-300 hover:text-white">Wired Series</a>
+                <a href="./category2.html" class="text-sm text-gray-300 hover:text-white">Earpods</a>
+                <a href="./category3.html" class="text-sm text-gray-300 hover:text-white">Bluetooth</a>
+                <a href="./category4.html" class="text-sm text-gray-300 hover:text-white">Headphones</a>
+            </div>
+        </div>
+
+        <a href="./products.html" class="border-b border-white/10 pb-4 text-gray-300 hover:text-white">Products</a>
+        <a href="./bestseller.html" class="border-b border-white/10 pb-4 text-gray-300 hover:text-white">Best
+            Sellers</a>
+        <a href="./about.html"
+            class="border-b border-white/10 pb-4 text-gray-300 hover:text-white font-bold text-white">About Us</a>
+        <a href="./contact.html" class="border-b border-white/10 pb-4 text-gray-300 hover:text-white">Contact</a>
+
+        <!-- Mobile Auth Section -->
+        <div id="auth-mobile" class="pt-2">
+            <!-- Injected by JS -->
+        </div>
+
+        <a href="./booking.html"
+            class="w-full py-4 bg-blue-600 rounded-xl text-center font-bold hover:bg-blue-700 transition mt-4">Order
+            Now</a>
+    </div>
+</div>
+
+
+
+<script>
+    // Global logout function for onclick handlers
+    function handleLogout() {
+        localStorage.removeItem('isLoggedIn');
+        localStorage.removeItem('isAdmin');
+        window.location.reload();
+    }
+</script>
 <script src="./js/main.js"></script>
 
 <div class="pt-20">
