@@ -46,10 +46,10 @@
     </style>
 </head>
 <nav
-    class="flex justify-around items-center bg-black/90 backdrop-blur-sm px-10 py-8 w-full mx-auto fixed top-0 left-0 right-0 z-50">
+    class="flex justify-between items-center bg-black/90 backdrop-blur-sm px-10 py-8 w-full mx-auto fixed top-0 left-0 right-0 z-50">
     <div class="text-2xl font-bold tracking-tighter"><a href="./index.html">COSMO<span
                 class="text-blue-500">.</span></a></div>
-    <div class="hidden md:flex space-x-10 text-sm font-medium text-gray-400">
+    <div class="hidden lg:flex space-x-10 text-sm font-medium text-gray-400">
         <div class="relative group h-full flex items-center">
             <button
                 class="hover:text-white transition flex items-center gap-1 outline-none py-2 group-hover:text-blue-400">
@@ -138,12 +138,14 @@
                 </div>
             </div>
         </div>
+        <a href="./home-2.html" class="hover:text-white transition mt-2">Audio</a>
         <a href="./products.html" class="hover:text-white transition mt-2">Products</a>
         <a href="./bestseller.html" class="hover:text-white transition mt-2">Best Sellers</a>
         <a href="./about.html" class="hover:text-white transition mt-2">About us</a>
         <a href="./contact.html" class="hover:text-white transition mt-2">Contact</a>
     </div>
-    <div class="flex items-center gap-6">
+    </div>
+    <div class="hidden lg:flex items-center gap-6">
         <div class="relative group">
             <button class="p-2 text-gray-400 hover:text-white transition rounded-full hover:bg-white/5 outline-none">
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
@@ -163,7 +165,53 @@
         <a href="./booking.html"
             class="px-6 py-2 bg-blue-600 rounded-full text-sm font-bold hover:bg-blue-700 transition">Order Now</a>
     </div>
+
+    <!-- Hamburger Button (Mobile) -->
+    <button id="mobile-menu-btn" class="lg:hidden text-gray-400 hover:text-white focus:outline-none relative z-50">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+    </button>
 </nav>
+
+<!-- Mobile Menu -->
+<div id="mobile-menu" class="hidden fixed inset-0 bg-[#0a0a0a] z-[9999] pt-20 px-6 overflow-y-auto">
+    <!-- Close Button -->
+    <button id="mobile-menu-close" class="absolute top-6 right-6 text-gray-400 hover:text-white z-[10000]">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+    </button>
+
+    <div class="flex flex-col space-y-6 text-lg">
+        <div class="border-b border-white/10 pb-4">
+            <h5 class="text-xs uppercase tracking-widest text-gray-500 mb-4">Collections</h5>
+            <div class="grid grid-cols-2 gap-4">
+                <a href="./category1.html" class="text-sm text-gray-300 hover:text-white">Wired Series</a>
+                <a href="./category2.html" class="text-sm text-gray-300 hover:text-white">Earpods</a>
+                <a href="./category3.html" class="text-sm text-gray-300 hover:text-white">Bluetooth</a>
+                <a href="./category4.html" class="text-sm text-gray-300 hover:text-white">Headphones</a>
+            </div>
+        </div>
+
+        <a href="./home-2.html" class="border-b border-white/10 pb-4 text-gray-300 hover:text-white">Audio</a>
+        <a href="./products.html" class="border-b border-white/10 pb-4 text-gray-300 hover:text-white">Products</a>
+        <a href="./bestseller.html" class="border-b border-white/10 pb-4 text-gray-300 hover:text-white">Best
+            Sellers</a>
+        <a href="./about.html" class="border-b border-white/10 pb-4 text-gray-300 hover:text-white">About Us</a>
+        <a href="./contact.html" class="border-b border-white/10 pb-4 text-gray-300 hover:text-white">Contact</a>
+
+        <!-- Mobile Auth Section -->
+        <div id="auth-mobile" class="pt-2 border-b border-white/10 pb-4">
+            <!-- Injected by JS -->
+        </div>
+
+        <a href="./booking.html"
+            class="w-full py-4 bg-blue-600 rounded-xl text-center font-bold hover:bg-blue-700 transition mt-4">Order
+            Now</a>
+    </div>
+</div>
+
 <script src="./js/main.js"></script>
 
 <div class="pt-20">
@@ -173,7 +221,30 @@
         <div class="text-gray-600 text-xs mt-6">Effective Date: January 21, 2026</div>
     </header>
 
+    <!-- Section 2: Privacy Rights Summary -->
+    <section class="max-w-6xl mx-auto px-6 mb-24 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="glass-panel p-8 rounded-3xl border-blue-500/20">
+            <div class="text-2xl mb-4">🖐️</div>
+            <h4 class="text-white font-bold mb-2">Right to Access</h4>
+            <p class="text-sm text-gray-500 mb-0">Request a full copy of the personal data we have collected about your
+                interactions with Cosmo.</p>
+        </div>
+        <div class="glass-panel p-8 rounded-3xl border-blue-500/20">
+            <div class="text-2xl mb-4">✏️</div>
+            <h4 class="text-white font-bold mb-2">Right to Rectify</h4>
+            <p class="text-sm text-gray-500 mb-0">Update your information at any time through your dashboard or by
+                contacting our support team.</p>
+        </div>
+        <div class="glass-panel p-8 rounded-3xl border-blue-500/20">
+            <div class="text-2xl mb-4">🗑️</div>
+            <h4 class="text-white font-bold mb-2">Right to Erasure</h4>
+            <p class="text-sm text-gray-500 mb-0">The "Right to be Forgotten" allows you to request permanent deletion
+                of your account and data.</p>
+        </div>
+    </section>
+
     <main class="max-w-4xl mx-auto px-6 pb-24">
+        <!-- Section 3: Detailed Policy Clauses -->
         <div class="policy-card p-8 md:p-16 rounded-[3rem] shadow-2xl">
 
             <section>
@@ -204,8 +275,6 @@
                     <li>To send updates regarding your order status or brand announcements (where opted-in).</li>
                 </ul>
             </section>
-
-
 
             <section>
                 <h3>3. Cookies and Tracking</h3>
@@ -242,8 +311,36 @@
                     <p class="mb-0 text-sm">Subject: Data Privacy Inquiry</p>
                 </div>
             </section>
-
         </div>
+
+        <!-- Section 4: Global Compliance -->
+        <section class="mt-24 text-center">
+            <h3 class="mb-8">Compliance Standards</h3>
+            <div class="flex flex-wrap justify-center gap-12 opacity-40 grayscale">
+                <div class="flex flex-col items-center">
+                    <div class="text-3xl font-black mb-2">GDPR</div>
+                    <p class="text-[10px] uppercase tracking-tighter">Compliant</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="text-3xl font-black mb-2">CCPA</div>
+                    <p class="text-[10px] uppercase tracking-tighter">California</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="text-3xl font-black mb-2">SSL</div>
+                    <p class="text-[10px] uppercase tracking-tighter">256-Bit</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Data Protection Callout -->
+        <section class="mt-24 p-12 bg-zinc-900/50 rounded-[2.5rem] border border-white/5 text-center">
+            <h2 class="text-2xl font-bold mb-4">Dedicated Privacy Support</h2>
+            <p class="text-gray-400 mb-8 max-w-xl mx-auto">Have concerns about how your data is handled? Our dedicated
+                privacy team is available to answer any questions regarding our storage and encryption standards.</p>
+            <a href="contact.html"
+                class="inline-block px-10 py-4 bg-white text-black font-bold rounded-xl hover:bg-blue-600 hover:text-white transition">Speak
+                with Privacy Officer</a>
+        </section>
 
         <div class="mt-12 flex justify-center gap-8 text-[10px] font-bold uppercase tracking-widest text-gray-600">
             <a href="tos.html" class="hover:text-blue-500 transition">Terms of Service</a>

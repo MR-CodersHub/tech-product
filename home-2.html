@@ -4,34 +4,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Category | Cosmo Audio</title>
-    <link rel="icon" type="icon/png" href="./assets/img/logo.png">
+    <title>Cosmo Gaming | Pro Audio Gear</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="icon/png" href="./assets/img/logo.png">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Inter', sans-serif;
-            background-color: #050505;
-            color: #f3f4f6;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #000;
+            color: #fff;
         }
 
-        .glass-panel {
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+        .blue-gradient-text {
+            background: linear-gradient(90deg, #fff 30%, #3b82f6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
-        .feature-gradient {
-            background: linear-gradient(to bottom right, #1e3a8a, #581c87);
+        .product-card {
+            background: linear-gradient(145deg, #0f0f0f 0%, #050505 100%);
+            border: 1px solid #1a1a1a;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .product-card:hover {
+            border-color: #3b82f6;
+            transform: scale(1.02);
+            box-shadow: 0 20px 40px rgba(59, 130, 246, 0.1);
+        }
+
+        .cta-glow {
+            box-shadow: 0 0 30px rgba(59, 130, 246, 0.4);
         }
     </style>
 </head>
 
-<body>
+<body class="font-[Inter] bg-[#0a0a0a] text-[#f9f9f9]">
+
+    <!-- Navbar (Exact match with index.html) -->
     <nav
         class="flex justify-between items-center bg-black/90 backdrop-blur-sm px-10 py-8 w-full mx-auto fixed top-0 left-0 right-0 z-50">
         <div class="text-2xl font-bold tracking-tighter"><a href="./index.html">COSMO<span
                     class="text-blue-500">.</span></a></div>
+
         <div class="hidden lg:flex space-x-10 text-sm font-medium text-gray-400">
             <div class="relative group h-full flex items-center">
                 <button
@@ -39,7 +54,8 @@
                     Categories
                     <svg class="w-3 h-3 transition-transform duration-300 group-hover:rotate-180 opacity-70" fill="none"
                         stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                        </path>
                     </svg>
                 </button>
                 <div
@@ -50,7 +66,6 @@
                             <span class="text-[10px] font-bold text-gray-500 uppercase tracking-[0.2em] select-none">Our
                                 Collections</span>
                         </div>
-
                         <a href="./category1.html"
                             class="flex items-center gap-4 px-4 py-3 rounded-xl hover:bg-white/5 transition-all group/item">
                             <div
@@ -60,79 +75,59 @@
                                         d="M13 10V3L4 14h7v7l9-11h-7z" />
                                 </svg>
                             </div>
-                            <div>
-                                <h4
-                                    class="text-gray-200 text-sm font-bold group-hover/item:text-white transition-colors">
-                                    Wired Series</h4>
-                                <p class="text-[11px] text-gray-500 group-hover/item:text-gray-400 transition-colors">
-                                    Studio-grade fidelity</p>
-                            </div>
+                            <span
+                                class="text-gray-200 text-sm font-bold group-hover/item:text-white transition-colors">Wired
+                                Series</span>
                         </a>
-
                         <a href="./category2.html"
                             class="flex items-center gap-4 px-4 py-3 rounded-xl hover:bg-white/5 transition-all group/item">
                             <div
-                                class="w-10 h-10 rounded-full bg-purple-500/10 flex items-center justify-center text-purple-400 group-hover/item:text-purple-300 transition-colors">
-                                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                class="w-8 h-8 rounded-full bg-purple-500/10 flex items-center justify-center text-purple-400 group-hover/item:text-purple-300 transition-colors">
+                                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
                                         d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" />
                                 </svg>
                             </div>
-                            <div>
-                                <h4
-                                    class="text-gray-200 text-sm font-bold group-hover/item:text-white transition-colors">
-                                    Earpods</h4>
-                                <p class="text-[11px] text-gray-500 group-hover/item:text-gray-400 transition-colors">
-                                    Compact & Powerful</p>
-                            </div>
+                            <span
+                                class="text-gray-200 text-sm font-bold group-hover/item:text-white transition-colors">Earpods</span>
                         </a>
-
                         <a href="./category3.html"
                             class="flex items-center gap-4 px-4 py-3 rounded-xl hover:bg-white/5 transition-all group/item">
                             <div
-                                class="w-10 h-10 rounded-full bg-pink-500/10 flex items-center justify-center text-pink-400 group-hover/item:text-pink-300 transition-colors">
-                                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                class="w-8 h-8 rounded-full bg-pink-500/10 flex items-center justify-center text-pink-400 group-hover/item:text-pink-300 transition-colors">
+                                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
                                         d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0" />
                                 </svg>
                             </div>
-                            <div>
-                                <h4
-                                    class="text-gray-200 text-sm font-bold group-hover/item:text-white transition-colors">
-                                    Bluetooth</h4>
-                                <p class="text-[11px] text-gray-500 group-hover/item:text-gray-400 transition-colors">No
-                                    wires, no limits</p>
-                            </div>
+                            <span
+                                class="text-gray-200 text-sm font-bold group-hover/item:text-white transition-colors">Bluetooth</span>
                         </a>
-
                         <a href="./category4.html"
                             class="flex items-center gap-4 px-4 py-3 rounded-xl hover:bg-white/5 transition-all group/item">
                             <div
-                                class="w-10 h-10 rounded-full bg-indigo-500/10 flex items-center justify-center text-indigo-400 group-hover/item:text-indigo-300 transition-colors">
-                                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                class="w-8 h-8 rounded-full bg-indigo-500/10 flex items-center justify-center text-indigo-400 group-hover/item:text-indigo-300 transition-colors">
+                                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
                                         d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
                                 </svg>
                             </div>
-                            <div>
-                                <h4
-                                    class="text-gray-200 text-sm font-bold group-hover/item:text-white transition-colors">
-                                    Headphones</h4>
-                                <p class="text-[11px] text-gray-500 group-hover/item:text-gray-400 transition-colors">
-                                    Immersive isolation</p>
-                            </div>
+                            <span
+                                class="text-gray-200 text-sm font-bold group-hover/item:text-white transition-colors">Headphones</span>
                         </a>
                     </div>
                 </div>
             </div>
-            <a href="./home-2.html" class="hover:text-white transition mt-2">Audio</a>
+
+            <a href="./home-2.html"
+                class="hover:text-white transition text-white border-b border-blue-500 pb-1 mt-2 ">Audio</a>
             <a href="./products.html" class="hover:text-white transition mt-2">Products</a>
             <a href="./bestseller.html" class="hover:text-white transition mt-2">Best Sellers</a>
             <a href="./about.html" class="hover:text-white transition mt-2">About us</a>
             <a href="./contact.html" class="hover:text-white transition mt-2">Contact</a>
         </div>
-        </div>
         <div class="hidden lg:flex items-center gap-6">
+            <!-- Auth Desktop -->
             <div class="relative group">
                 <button
                     class="p-2 text-gray-400 hover:text-white transition rounded-full hover:bg-white/5 outline-none">
@@ -146,12 +141,13 @@
                     class="absolute right-0 top-full pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 w-48 z-50">
                     <div id="auth-dropdown"
                         class="bg-[#0a0a0a]/95 backdrop-blur-xl border border-white/10 rounded-xl p-2 shadow-2xl shadow-blue-500/10 ring-1 ring-white/5 flex flex-col gap-1">
-                        <!-- Content will be injected by JS -->
+                        <!-- Injected by JS -->
                     </div>
                 </div>
             </div>
             <a href="./booking.html"
-                class="px-6 py-2 bg-blue-600 rounded-full text-sm font-bold hover:bg-blue-700 transition">Order Now</a>
+                class="px-6 py-2 bg-blue-600 rounded-full text-sm font-bold hover:bg-blue-700 transition">Order
+                Now</a>
         </div>
 
         <!-- Hamburger Button (Mobile) -->
@@ -182,8 +178,8 @@
                     <a href="./category4.html" class="text-sm text-gray-300 hover:text-white">Headphones</a>
                 </div>
             </div>
-
-            <a href="./home-2.html" class="border-b border-white/10 pb-4 text-gray-300 hover:text-white">Audio</a>
+            <a href="./home-2.html"
+                class="border-b border-white/10 pb-4 text-gray-300 hover:text-white font-bold text-white">Audio</a>
             <a href="./products.html" class="border-b border-white/10 pb-4 text-gray-300 hover:text-white">Products</a>
             <a href="./bestseller.html" class="border-b border-white/10 pb-4 text-gray-300 hover:text-white">Best
                 Sellers</a>
@@ -201,154 +197,174 @@
         </div>
     </div>
 
-    <script src="./js/main.js"></script>
-
-    <div class="pt-20">
-        <section class="max-w-7xl mx-auto px-8 py-24 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div>
-                <span class="text-blue-500 font-bold tracking-[0.2em] text-xs uppercase mb-4 block">Premium
-                    Collection</span>
-                <h1 id="cat-title" class="text-6xl font-bold mb-6">Wireless Audio</h1>
-                <p id="cat-desc" class="text-xl text-gray-400 font-light leading-relaxed mb-8">
-                    Experience freedom with our latest Bluetooth 5.3 powered wireless collection.
-                </p>
-                <div class="flex gap-4">
-                    <a href="#preorder"
-                        class="px-8 py-4 bg-white text-black font-bold rounded-xl hover:bg-blue-500 hover:text-white transition">Pre-order
-                        Now</a>
-                </div>
+    <!-- Main Content -->
+    <section
+        class="min-h-screen flex flex-col items-center justify-center text-center px-6 pt-20 bg-[radial-gradient(circle_at_center,_#111_0%,_#000_100%)]">
+        <div class="max-w-4xl">
+            <h1 class="text-5xl md:text-[84px] font-black leading-tight mb-6 blue-gradient-text">
+                Stop Listening. <br> Start Feeling.
+            </h1>
+            <p class="text-zinc-400 text-lg md:text-xl font-light mb-10 max-w-2xl mx-auto">
+                Cosmo isn't just audio hardware. It’s a return to the studio. Experience the depth, clarity, and raw
+                emotion of music exactly as the artist intended.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="products.html"
+                    class="bg-white text-black px-12 py-5 rounded-2xl font-black text-sm uppercase hover:bg-blue-600 hover:text-white transition-all">Shop
+                    the Collection</a>
+                <a href="about.html"
+                    class="bg-zinc-900 text-zinc-400 border border-zinc-800 px-12 py-5 rounded-2xl font-black text-sm uppercase hover:text-white transition-all">Why
+                    Cosmo?</a>
             </div>
-            <div class="relative">
-                <div class="absolute -inset-4 bg-blue-500/20 blur-3xl rounded-full"></div>
-                <img id="cat-img"
-                    src="https://images.unsplash.com/photo-1613040809024-b4ef7ba99bc3?q=80&w=800&auto=format&fit=crop"
-                    alt="Product Category"
-                    class="relative rounded-3xl shadow-2xl border border-white/10 w-full h-[400px] object-cover">
-            </div>
-        </section>
-
-        <section class="max-w-7xl mx-auto px-8 py-20">
-            <h2 class="text-3xl font-bold mb-12">Technical Specifications</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="glass-panel p-8 rounded-2xl">
-                    <h4 class="text-blue-400 text-xs uppercase tracking-widest mb-2">Sound Tech</h4>
-                    <p class="text-lg">Equipped with aptX Adaptive technology for low-latency, high-resolution audio.
-                    </p>
-                </div>
-                <div class="glass-panel p-8 rounded-2xl">
-                    <h4 class="text-blue-400 text-xs uppercase tracking-widest mb-2">Range</h4>
-                    <p class="text-lg">Uninterrupted wireless connectivity up to 15 meters in open spaces.</p>
-                </div>
-                <div class="glass-panel p-8 rounded-2xl">
-                    <h4 class="text-blue-400 text-xs uppercase tracking-widest mb-2">Battery</h4>
-                    <p class="text-lg">Extended 30-hour battery life with intelligent power management systems.</p>
-                </div>
-            </div>
-        </section>
-
-        <div class="max-w-7xl mx-auto px-8 space-y-24">
-
-            <section class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center py-24">
-                <div>
-                    <h2 class="text-3xl font-bold mb-4">Ergonomic Design</h2>
-                    <p class="text-gray-400 mb-6">Crafted for all-day comfort using premium materials that balance
-                        durability with a lightweight feel.</p>
-                    <ul class="space-y-3 text-sm text-gray-300">
-                        <li class="flex items-center gap-2">
-                            <svg class="w-4 h-4 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M5 13l4 4L19 7" />
-                            </svg>
-                            Memory foam ear cushions
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <svg class="w-4 h-4 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M5 13l4 4L19 7" />
-                            </svg>
-                            Tangle-resistant reinforced cables
-                        </li>
-                    </ul>
-                </div>
-                <div class="glass-panel p-10 rounded-3xl text-center">
-                    <svg class="w-12 h-12 text-blue-500 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                            d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a1 1 0 010 2H5v12a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 012-2h4a1 1 0 010 2h-4v12a4 4 0 01-4 4H7z" />
-                    </svg>
-                    <p class="mt-4 font-semibold uppercase tracking-widest text-xs text-blue-400">Aesthetic Detail</p>
-                </div>
-            </section>
-
-            <section class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                <div class="order-2 md:order-1 glass-panel p-10 rounded-3xl text-center">
-                    <svg class="w-12 h-12 text-blue-500 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                            d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0" />
-                    </svg>
-                    <p class="mt-4 font-semibold uppercase tracking-widest text-xs text-blue-400">Smart Connection</p>
-                </div>
-                <div class="order-1 md:order-2">
-                    <h2 class="text-3xl font-bold mb-4">Seamless Connectivity</h2>
-                    <p class="text-gray-400 mb-6">Experience the future of audio with instant multi-device pairing and
-                        zero signal drop.</p>
-                    <div class="grid grid-cols-2 gap-4">
-                        <div class="bg-zinc-900 p-4 rounded-xl text-center">
-                            <p class="text-2xl font-bold">15m</p>
-                            <p class="text-[10px] text-gray-500 uppercase">Range</p>
-                        </div>
-                        <div class="bg-zinc-900 p-4 rounded-xl text-center">
-                            <p class="text-2xl font-bold">Dual</p>
-                            <p class="text-[10px] text-gray-500 uppercase">Pairing</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="text-center py-12">
-                <h2 class="text-3xl font-bold mb-12">How It Works</h2>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="space-y-4">
-                        <div class="text-blue-500 text-2xl font-bold">01</div>
-                        <h3 class="font-bold">Instant Pair</h3>
-                        <p class="text-sm text-gray-500">Enable Bluetooth on your device and select 'Cosmo Air' to
-                            connect instantly.</p>
-                    </div>
-                    <div class="space-y-4">
-                        <div class="text-blue-500 text-2xl font-bold">02</div>
-                        <h3 class="font-bold">Sync & Play</h3>
-                        <p class="text-sm text-gray-500">Enjoy perfectly synchronized audio and video thanks to our
-                            ultra-low latency tech.</p>
-                    </div>
-                    <div class="space-y-4">
-                        <div class="text-blue-500 text-2xl font-bold">03</div>
-                        <h3 class="font-bold">Smart Assist</h3>
-                        <p class="text-sm text-gray-500">Access your voice assistant with a single tap for hands-free
-                            control on the move.</p>
-                    </div>
-                </div>
-            </section>
-
         </div>
+    </section>
 
-        <section id="preorder" class="max-w-3xl mx-auto px-8 py-24 text-center">
-            <h2 class="text-4xl font-bold mb-4">Request Information</h2>
-            <p class="text-gray-400 mb-10">Sign up for availability updates and exclusive pre-order offers.</p>
+    <section id="tech" class="py-24 px-6 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
+        <div class="space-y-4">
+            <h3 class="text-blue-500 font-bold uppercase text-xs tracking-[0.3em]">The Clarity Problem</h3>
+            <p class="text-xl font-bold">Hear the Unheard.</p>
+            <p class="text-zinc-500 text-sm leading-relaxed">Standard headphones muddy the mids and lose the highs. Our
+                Beryllium-coated drivers unlock a frequency range up to 45kHz, revealing details you've never noticed in
+                your favorite tracks.</p>
+        </div>
+        <div class="space-y-4">
+            <h3 class="text-blue-500 font-bold uppercase text-xs tracking-[0.3em]">The Latency Lag</h3>
+            <p class="text-xl font-bold">Perfectly Synced.</p>
+            <p class="text-zinc-500 text-sm leading-relaxed">Wireless lag ruins movies and gaming. With AptX Adaptive
+                technology, we’ve cut latency down to 32ms—virtually indistinguishable from a wired connection.</p>
+        </div>
+        <div class="space-y-4">
+            <h3 class="text-blue-500 font-bold uppercase text-xs tracking-[0.3em]">The Comfort Gap</h3>
+            <p class="text-xl font-bold">Wear it All Day.</p>
+            <p class="text-zinc-500 text-sm leading-relaxed">No more "ear fatigue." Our thermal-reactive memory foam
+                molds to your unique shape, providing 26dB of passive noise isolation without the "hiss" of active
+                cancellation.</p>
+        </div>
+    </section>
 
-            <form id="infoRequestForm" class="text-left space-y-4">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <input type="text" name="firstname" placeholder="First Name" required
-                        class="w-full bg-zinc-900 border border-white/10 p-4 rounded-xl focus:outline-none focus:border-blue-500">
-                    <input type="email" name="email" placeholder="Email Address" required
-                        class="w-full bg-zinc-900 border border-white/10 p-4 rounded-xl focus:outline-none focus:border-blue-500">
+    <section id="shop" class="py-24 px-6 bg-zinc-950">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex justify-between items-end mb-16">
+                <div>
+                    <h2 class="text-4xl font-black">Choose Your Sound.</h2>
+                    <p class="text-zinc-500 mt-2">Professional hardware for every lifestyle.</p>
                 </div>
-                <textarea placeholder="Tell us about your audio preferences"
-                    class="w-full bg-zinc-900 border border-white/10 p-4 rounded-xl h-32 focus:outline-none focus:border-blue-500"></textarea>
-                <button type="submit"
-                    class="w-full py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl transition">Submit
-                    Request</button>
-            </form>
-        </section>
-    </div>
+                <div class="hidden md:block h-[1px] flex-1 bg-zinc-900 mx-10 mb-4"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="product-card p-8 rounded-[2.5rem] flex flex-col">
+                    <div
+                        class="mb-6 overflow-hidden rounded-3xl bg-zinc-900 aspect-square flex items-center justify-center">
+                        <img src="https://plus.unsplash.com/premium_photo-1668418188837-d40b734ed6d2?q=80&w=687&auto=format&fit=crop"
+                        alt="Wired Earphones"
+                        class="w-full h-[250px] object-cover rounded-2xl mb-6 transition-transform duration-500 group-hover:scale-[1.03]">
+                    
+                    </div>
+                    <h3 class="text-xl font-bold mb-1">Cosmo Pro</h3>
+                    <p class="text-zinc-600 text-xs mb-4">Studio-Grade Headphones</p>
+                    <p class="text-blue-500 font-black mb-6">$299.00</p>
+                    <button
+                        class="mt-auto w-full bg-white text-black py-4 rounded-xl font-bold text-xs uppercase hover:bg-blue-600 hover:text-white transition-all">Add
+                        to Cart</button>
+                </div>
+
+                <div class="product-card p-8 rounded-[2.5rem] flex flex-col border-blue-600/30">
+                    <div
+                        class="mb-6 overflow-hidden rounded-3xl bg-zinc-900 aspect-square flex items-center justify-center relative">
+                        <span class="absolute top-4 right-4 bg-blue-600 text-[10px] font-black px-2 py-1 rounded">BEST
+                            SELLER</span>
+                        <img src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?q=80&w=800&auto=format&fit=crop"
+                        alt="Earpods"
+                        class="w-full h-[250px] object-cover rounded-2xl mb-6 transition-transform duration-500 group-hover:scale-[1.03]">
+                   
+                    </div>
+                    <h3 class="text-xl font-bold mb-1">AirPods Max-X</h3>
+                    <p class="text-zinc-600 text-xs mb-4">Hi-Fi Bluetooth Earpods</p>
+                    <p class="text-blue-500 font-black mb-6">$189.00</p>
+                    <button
+                        class="mt-auto w-full bg-blue-600 text-white py-4 rounded-xl font-bold text-xs uppercase hover:bg-blue-500 transition-all">Add
+                        to Cart</button>
+                </div>
+
+                <div class="product-card p-8 rounded-[2.5rem] flex flex-col">
+                    <div
+                        class="mb-6 overflow-hidden rounded-3xl bg-zinc-900 aspect-square flex items-center justify-center">
+                      <img src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?q=80&w=800&auto=format&fit=crop"
+                        alt="Headphones"
+                        class="w-full h-[250px] object-cover rounded-2xl mb-6 transition-transform duration-500 group-hover:scale-[1.03]">
+                    
+                    </div>
+                    <h3 class="text-xl font-bold mb-1">Silver Wired</h3>
+                    <p class="text-zinc-600 text-xs mb-4">Lossless In-Ear Monitors</p>
+                    <p class="text-blue-500 font-black mb-6">$129.00</p>
+                    <button
+                        class="mt-auto w-full bg-white text-black py-4 rounded-xl font-bold text-xs uppercase hover:bg-blue-600 hover:text-white transition-all">Add
+                        to Cart</button>
+                </div>
+
+                <div class="product-card p-8 rounded-[2.5rem] flex flex-col">
+                    <div
+                        class="mb-6 overflow-hidden rounded-3xl bg-zinc-900 aspect-square flex items-center justify-center">
+                        <img src="https://images.unsplash.com/photo-1623569409584-74330f5b1871?q=80&w=1170&auto=format&fit=crop"
+                        alt="Bluetooth Earphones"
+                        class="w-full h-[250px] object-cover rounded-2xl mb-6 transition-transform duration-500 group-hover:scale-[1.03]">
+                    
+                    </div>
+                    <h3 class="text-xl font-bold mb-1">Velocity Sport</h3>
+                    <p class="text-zinc-600 text-xs mb-4">Sweat-Proof Bluetooth</p>
+                    <p class="text-blue-500 font-black mb-6">$159.00</p>
+                    <button
+                        class="mt-auto w-full bg-white text-black py-4 rounded-xl font-bold text-xs uppercase hover:bg-blue-600 hover:text-white transition-all">Add
+                        to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 px-6 text-center border-y border-zinc-900">
+        <p class="text-blue-500 font-bold uppercase text-xs tracking-widest mb-10">Trusted by Professionals</p>
+        <div class="max-w-4xl mx-auto">
+            <p class="text-2xl md:text-4xl font-light italic leading-relaxed mb-8">
+                "The noise isolation on the Cosmo Pro is a game-changer. I’ve never experienced such immersive sound in
+                such a comfortable design."
+            </p>
+            <div class="flex flex-col items-center">
+                <div
+                    class="w-14 h-14 rounded-full bg-gradient-to-tr from-blue-900 to-purple-800 flex items-center justify-center font-bold">
+                    EM
+                </div>
+                <h4 class="font-bold">Elena Moretti</h4>
+                <p class="text-xs text-zinc-500 uppercase tracking-widest">Frequent Traveler • Verified Buyer</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-32 px-6 bg-blue-600 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10 pointer-events-none">
+            <svg width="100%" height="100%">
+                <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" stroke-width="1" />
+                </pattern>
+                <rect width="100%" height="100%" fill="url(#grid)" />
+            </svg>
+        </div>
+        <div class="max-w-3xl mx-auto text-center relative z-10">
+            <h2 class="text-5xl md:text-7xl font-black text-white mb-6">Own the Future of Sound.</h2>
+            <p class="text-blue-100 text-lg mb-12 font-medium">
+                Our first production batch is nearly sold out. Secure your pair today and get free express shipping
+                worldwide.
+            </p>
+            <a href="booking.html"
+                class="inline-block bg-white text-blue-600 px-12 py-5 rounded-2xl font-black text-lg uppercase shadow-2xl hover:bg-zinc-100 transition-all">
+                Reserve My Unit Now
+            </a>
+            <p class="mt-6 text-blue-200 text-xs font-bold uppercase tracking-widest">
+                30-Day Risk-Free Trial • 2-Year Warranty
+            </p>
+        </div>
+    </section>
+    <!-- Footer (Exact match with index.html) -->
     <footer class="bg-[#050505] text-[#f3f4f6] border-t border-white/5 pt-20 pb-10 px-6">
         <div class="max-w-7xl mx-auto">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-32 mb-16">
@@ -418,13 +434,8 @@
             </div>
         </div>
     </footer>
-    <script>
-        document.getElementById('infoRequestForm').addEventListener('submit', function (e) {
-            e.preventDefault();
-            alert('Thank you! Your request has been submitted successfully.');
-            this.reset();
-        });
-    </script>
+
+    <script src="./js/main.js"></script>
 
 </body>
 

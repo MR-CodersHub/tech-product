@@ -29,10 +29,10 @@
 
 <body>
     <nav
-        class="flex justify-around items-center bg-black/90 backdrop-blur-sm px-10 py-8 w-full mx-auto fixed top-0 left-0 right-0 z-50">
+        class="flex justify-between items-center bg-black/90 backdrop-blur-sm px-10 py-8 w-full mx-auto fixed top-0 left-0 right-0 z-50">
         <div class="text-2xl font-bold tracking-tighter"><a href="./index.html">COSMO<span
                     class="text-blue-500">.</span></a></div>
-        <div class="hidden md:flex space-x-10 text-sm font-medium text-gray-400">
+        <div class="hidden lg:flex space-x-10 text-sm font-medium text-gray-400">
             <div class="relative group h-full flex items-center">
                 <button
                     class="hover:text-white transition flex items-center gap-1 outline-none py-2 group-hover:text-blue-400">
@@ -125,12 +125,14 @@
                     </div>
                 </div>
             </div>
+            <a href="./home-2.html" class="hover:text-white transition mt-2">Audio</a>
             <a href="./products.html" class="hover:text-white transition mt-2">Products</a>
             <a href="./bestseller.html" class="hover:text-white transition mt-2">Best Sellers</a>
             <a href="./about.html" class="hover:text-white transition mt-2">About us</a>
             <a href="./contact.html" class="hover:text-white transition mt-2">Contact</a>
         </div>
-        <div class="flex items-center gap-6">
+        </div>
+        <div class="hidden lg:flex items-center gap-6">
             <div class="relative group">
                 <button
                     class="p-2 text-gray-400 hover:text-white transition rounded-full hover:bg-white/5 outline-none">
@@ -151,7 +153,53 @@
             <a href="./booking.html"
                 class="px-6 py-2 bg-blue-600 rounded-full text-sm font-bold hover:bg-blue-700 transition">Order Now</a>
         </div>
+
+        <!-- Hamburger Button (Mobile) -->
+        <button id="mobile-menu-btn" class="lg:hidden text-gray-400 hover:text-white focus:outline-none relative z-50">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                </path>
+            </svg>
+        </button>
     </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden fixed inset-0 bg-[#0a0a0a] z-[9999] pt-20 px-6 overflow-y-auto">
+        <!-- Close Button -->
+        <button id="mobile-menu-close" class="absolute top-6 right-6 text-gray-400 hover:text-white z-[10000]">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+        </button>
+
+        <div class="flex flex-col space-y-6 text-lg">
+            <div class="border-b border-white/10 pb-4">
+                <h5 class="text-xs uppercase tracking-widest text-gray-500 mb-4">Collections</h5>
+                <div class="grid grid-cols-2 gap-4">
+                    <a href="./category1.html" class="text-sm text-gray-300 hover:text-white">Wired Series</a>
+                    <a href="./category2.html" class="text-sm text-gray-300 hover:text-white">Earpods</a>
+                    <a href="./category3.html" class="text-sm text-gray-300 hover:text-white">Bluetooth</a>
+                    <a href="./category4.html" class="text-sm text-gray-300 hover:text-white">Headphones</a>
+                </div>
+            </div>
+            <a href="./home-2.html" class="border-b border-white/10 pb-4 text-gray-300 hover:text-white">Audio</a>
+            <a href="./products.html" class="border-b border-white/10 pb-4 text-gray-300 hover:text-white">Products</a>
+            <a href="./bestseller.html" class="border-b border-white/10 pb-4 text-gray-300 hover:text-white">Best
+                Sellers</a>
+            <a href="./about.html" class="border-b border-white/10 pb-4 text-gray-300 hover:text-white">About Us</a>
+            <a href="./contact.html" class="border-b border-white/10 pb-4 text-gray-300 hover:text-white">Contact</a>
+
+            <!-- Mobile Auth Section -->
+            <div id="auth-mobile" class="pt-2 border-b border-white/10 pb-4">
+                <!-- Injected by JS -->
+            </div>
+
+            <a href="./booking.html"
+                class="w-full py-4 bg-blue-600 rounded-xl text-center font-bold hover:bg-blue-700 transition mt-4">Order
+                Now</a>
+        </div>
+    </div>
+
     <script src="./js/main.js"></script>
 
     <div class="pt-20">
@@ -206,19 +254,37 @@
                     <p class="text-gray-400 mb-6">Crafted for all-day comfort using premium materials that balance
                         durability with a lightweight feel.</p>
                     <ul class="space-y-3 text-sm text-gray-300">
-                        <li class="flex items-center gap-2"><span>✓</span> Memory foam ear cushions</li>
-                        <li class="flex items-center gap-2"><span>✓</span> Tangle-resistant reinforced cables</li>
+                        <li class="flex items-center gap-2">
+                            <svg class="w-4 h-4 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7" />
+                            </svg>
+                            Memory foam ear cushions
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <svg class="w-4 h-4 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7" />
+                            </svg>
+                            Tangle-resistant reinforced cables
+                        </li>
                     </ul>
                 </div>
                 <div class="glass-panel p-10 rounded-3xl text-center">
-                    <span class="text-5xl">🎨</span>
+                    <svg class="w-12 h-12 text-blue-500 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                            d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a1 1 0 010 2H5v12a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 012-2h4a1 1 0 010 2h-4v12a4 4 0 01-4 4H7z" />
+                    </svg>
                     <p class="mt-4 font-semibold uppercase tracking-widest text-xs text-blue-400">Aesthetic Detail</p>
                 </div>
             </section>
 
             <section class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                 <div class="order-2 md:order-1 glass-panel p-10 rounded-3xl text-center">
-                    <span class="text-5xl">📶</span>
+                    <svg class="w-12 h-12 text-blue-500 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                            d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0" />
+                    </svg>
                     <p class="mt-4 font-semibold uppercase tracking-widest text-xs text-blue-400">Smart Connection</p>
                 </div>
                 <div class="order-1 md:order-2">
@@ -283,7 +349,7 @@
             </form>
         </section>
     </div>
-<footer class="bg-[#050505] text-[#f3f4f6] border-t border-white/5 pt-20 pb-10 px-6">
+    <footer class="bg-[#050505] text-[#f3f4f6] border-t border-white/5 pt-20 pb-10 px-6">
         <div class="max-w-7xl mx-auto">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-32 mb-16">
 

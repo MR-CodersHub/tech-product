@@ -41,10 +41,10 @@
 </head>
 
 <nav
-    class="flex justify-around items-center bg-black/90 backdrop-blur-sm px-10 py-8 w-full mx-auto fixed top-0 left-0 right-0 z-50">
+    class="flex justify-between items-center bg-black/90 backdrop-blur-sm px-10 py-8 w-full mx-auto fixed top-0 left-0 right-0 z-50">
     <div class="text-2xl font-bold tracking-tighter"><a href="./index.html">COSMO<span
                 class="text-blue-500">.</span></a></div>
-    <div class="hidden md:flex space-x-10 text-sm font-medium text-gray-400">
+    <div class="hidden lg:flex space-x-10 text-sm font-medium text-gray-400">
         <div class="relative group h-full flex items-center">
             <button
                 class="hover:text-white transition flex items-center gap-1 outline-none py-2 group-hover:text-blue-400">
@@ -133,12 +133,14 @@
                 </div>
             </div>
         </div>
+        <a href="./home-2.html" class="hover:text-white transition mt-2">Audio</a>
         <a href="./products.html" class="hover:text-white transition mt-2">Products</a>
         <a href="./bestseller.html" class="hover:text-white transition mt-2">Best Sellers</a>
         <a href="./about.html" class="hover:text-white transition mt-2">About us</a>
         <a href="./contact.html" class="text-white transition mt-2 border-b border-blue-500 pb-1">Contact</a>
     </div>
-    <div class="flex items-center gap-6">
+    </div>
+    <div class="hidden lg:flex items-center gap-6">
         <div class="relative group">
             <button class="p-2 text-gray-400 hover:text-white transition rounded-full hover:bg-white/5 outline-none">
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
@@ -158,7 +160,53 @@
         <a href="./booking.html"
             class="px-6 py-2 bg-blue-600 rounded-full text-sm font-bold hover:bg-blue-700 transition">Order Now</a>
     </div>
+
+    <!-- Hamburger Button (Mobile) -->
+    <button id="mobile-menu-btn" class="lg:hidden text-gray-400 hover:text-white focus:outline-none relative z-50">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+    </button>
 </nav>
+
+<!-- Mobile Menu -->
+<div id="mobile-menu" class="hidden fixed inset-0 bg-[#0a0a0a] z-[9999] pt-20 px-6 overflow-y-auto">
+    <!-- Close Button -->
+    <button id="mobile-menu-close" class="absolute top-6 right-6 text-gray-400 hover:text-white z-[10000]">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+    </button>
+
+    <div class="flex flex-col space-y-6 text-lg">
+        <div class="border-b border-white/10 pb-4">
+            <h5 class="text-xs uppercase tracking-widest text-gray-500 mb-4">Collections</h5>
+            <div class="grid grid-cols-2 gap-4">
+                <a href="./category1.html" class="text-sm text-gray-300 hover:text-white">Wired Series</a>
+                <a href="./category2.html" class="text-sm text-gray-300 hover:text-white">Earpods</a>
+                <a href="./category3.html" class="text-sm text-gray-300 hover:text-white">Bluetooth</a>
+                <a href="./category4.html" class="text-sm text-gray-300 hover:text-white">Headphones</a>
+            </div>
+        </div>
+
+        <a href="./home-2.html" class="border-b border-white/10 pb-4 text-gray-300 hover:text-white">Audio</a>
+        <a href="./products.html" class="border-b border-white/10 pb-4 text-gray-300 hover:text-white">Products</a>
+        <a href="./bestseller.html" class="border-b border-white/10 pb-4 text-gray-300 hover:text-white">Best
+            Sellers</a>
+        <a href="./about.html" class="border-b border-white/10 pb-4 text-gray-300 hover:text-white">About Us</a>
+        <a href="./contact.html" class="border-b border-white/10 pb-4 text-gray-300 hover:text-white">Contact</a>
+
+        <!-- Mobile Auth Section -->
+        <div id="auth-mobile" class="pt-2 border-b border-white/10 pb-4">
+            <!-- Injected by JS -->
+        </div>
+
+        <a href="./booking.html"
+            class="w-full py-4 bg-blue-600 rounded-xl text-center font-bold hover:bg-blue-700 transition mt-4">Order
+            Now</a>
+    </div>
+</div>
+
 <script src="./js/main.js"></script>
 
 <div class="pt-32">
@@ -171,22 +219,31 @@
     </header>
 
     <main class="max-w-7xl mx-auto px-6 pb-24 grid grid-cols-1 lg:grid-cols-12 gap-16">
-
+        <!-- Section 2: Contact Details & Info -->
         <div class="lg:col-span-5 space-y-12">
 
             <div class="space-y-6">
                 <h3 class="text-2xl font-bold">Get in touch</h3>
                 <div class="space-y-4">
                     <div class="flex items-center gap-4 text-gray-400">
-                        <span class="text-blue-500">📧</span>
+                        <svg class="w-5 h-5 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
                         <span>support@cosmo-audio.com</span>
                     </div>
                     <div class="flex items-center gap-4 text-gray-400">
-                        <span class="text-blue-500">📞</span>
+                        <svg class="w-5 h-5 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                        </svg>
                         <span>+1 (800) 123-4567</span>
                     </div>
                     <div class="flex items-center gap-4 text-gray-400">
-                        <span class="text-blue-500">🕒</span>
+                        <svg class="w-5 h-5 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
                         <span>Mon - Fri: 9:00 AM - 6:00 PM EST</span>
                     </div>
                 </div>
@@ -203,25 +260,20 @@
                 </div>
             </div>
             <div class="glass-card h-48 rounded-[2rem] relative overflow-hidden accent-glow">
-
-                <!-- Google Map -->
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124440.09559828453!2d80.15456955!3d12.918960850000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525d0cc055d7c3%3A0x7d6b38c037915502!2sSIPCOT%20IT%20Park%2C%20Siruseri%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1709600000000!5m2!1sen!2sin"
                     class="absolute inset-0 w-full h-full border-0 grayscale opacity-30" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
-
-                <!-- Overlay text -->
                 <div class="absolute inset-0 flex items-center justify-center z-10 pointer-events-none">
                     <p class="text-xs font-bold uppercase tracking-widest text-gray-200">
                         Chennai, Tamil Nadu
                     </p>
                 </div>
-
             </div>
-
         </div>
 
+        <!-- Section 3: Contact Form -->
         <div class="lg:col-span-7">
             <div class="glass-card p-8 md:p-12 rounded-[2.5rem] accent-glow">
                 <form id="contactForm" class="space-y-6">
@@ -266,15 +318,87 @@
                         class="w-full py-5 bg-blue-600 text-white font-bold rounded-2xl hover:bg-blue-700 transition shadow-xl transform hover:scale-[1.01]">
                         Send Message
                     </button>
-
-                    <p class="text-center text-xs text-gray-500 mt-4">
-                        Our team typically responds within 24 hours.
-                    </p>
+                    <p class="text-center text-xs text-gray-500 mt-4">Our team typically responds within 24 hours.</p>
                 </form>
             </div>
         </div>
     </main>
-<footer class="bg-[#050505] text-[#f3f4f6] border-t border-white/5 pt-20 pb-10 px-6">
+
+    <!-- Section 4: Our Commitment -->
+    <section class="py-24 bg-zinc-900/40 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+            <div class="space-y-4">
+                <svg class="w-10 h-10 text-blue-500 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <h4 class="font-bold">Fast Response</h4>
+                <p class="text-sm text-gray-500">We aim to respond to all inquiries within 1 business day, regardless of
+                    your location.</p>
+            </div>
+            <div class="space-y-4">
+                <svg class="w-10 h-10 text-blue-500 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                        d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                        d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+                <h4 class="font-bold">Expert Guidance</h4>
+                <p class="text-sm text-gray-500">Our support staff are audio engineers who understand the mechanics of
+                    every product.</p>
+            </div>
+            <div class="space-y-4">
+                <svg class="w-10 h-10 text-blue-500 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                        d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9-9c1.657 0 3 1.343 3 3s-1.343 3-3 3-3-1.343-3-3 1.343-3 3-3z" />
+                </svg>
+                <h4 class="font-bold">Global Presence</h4>
+                <p class="text-sm text-gray-500">Support available in 12 languages with localized knowledge for varying
+                    regional power standards.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Global Offices -->
+    <section class="py-24 max-w-7xl mx-auto px-6">
+        <h3 class="text-3xl font-bold mb-12 text-center">Global Presence</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="glass-card p-8 rounded-3xl">
+                <h5 class="text-blue-500 font-bold mb-2">New York</h5>
+                <p class="text-xs text-gray-500">Headquarters & Design Lab<br>5th Ave, NY 10001</p>
+            </div>
+            <div class="glass-card p-8 rounded-3xl">
+                <h5 class="text-blue-500 font-bold mb-2">London</h5>
+                <p class="text-xs text-gray-500">European Logistics Hub<br>Shoreditch High St, E1 6JJ</p>
+            </div>
+            <div class="glass-card p-8 rounded-3xl">
+                <h5 class="text-blue-500 font-bold mb-2">Tokyo</h5>
+                <p class="text-xs text-gray-500">Hardware Engineering<br>Minato City, 105-0011</p>
+            </div>
+            <div class="glass-card p-8 rounded-3xl">
+                <h5 class="text-blue-500 font-bold mb-2">Chennai</h5>
+                <p class="text-xs text-gray-500">R&D & Support Center<br>SIPCOT IT Park, 603103</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: Press & Partnership -->
+    <section class="py-24 border-t border-white/5">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-6">Partnership & Media</h2>
+            <p class="text-gray-500 mb-10">Are you a retailer interested in stocking Cosmo, or a member of the press
+                looking for high-res assets?</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="mailto:media@cosmo-audio.com"
+                    class="px-8 py-4 bg-white/5 border border-white/10 rounded-xl font-bold hover:bg-white hover:text-black transition">Press
+                    Inquiries</a>
+                <a href="mailto:partners@cosmo-audio.com"
+                    class="px-8 py-4 bg-white/5 border border-white/10 rounded-xl font-bold hover:bg-white hover:text-black transition">Be
+                    a Partner</a>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-[#050505] text-[#f3f4f6] border-t border-white/5 pt-20 pb-10 px-6">
         <div class="max-w-7xl mx-auto">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-32 mb-16">
 
