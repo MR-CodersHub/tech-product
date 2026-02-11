@@ -29,18 +29,11 @@ function initNavbar() {
             e.preventDefault();
             e.stopPropagation();
             console.log('Hamburger clicked! Current classes:', mobileMenu.className);
-            console.log('Before - Display:', window.getComputedStyle(mobileMenu).display);
-            console.log('Before - Visibility:', window.getComputedStyle(mobileMenu).visibility);
-            console.log('Before - Opacity:', window.getComputedStyle(mobileMenu).opacity);
 
             mobileMenu.classList.remove('hidden');
-            mobileMenu.style.display = 'block'; // Explicitly set display
+            mobileMenu.style.display = ''; // Clear inline display to let CSS classes take over
 
             console.log('After removing hidden:', mobileMenu.className);
-            console.log('After - Display:', window.getComputedStyle(mobileMenu).display);
-            console.log('After - Visibility:', window.getComputedStyle(mobileMenu).visibility);
-            console.log('After - Opacity:', window.getComputedStyle(mobileMenu).opacity);
-
             document.body.style.overflow = 'hidden'; // Prevent background scroll
         });
 
@@ -52,7 +45,7 @@ function initNavbar() {
                 e.stopPropagation();
                 console.log('Close button clicked!');
                 mobileMenu.classList.add('hidden');
-                mobileMenu.style.display = 'none'; // Explicitly hide
+                mobileMenu.style.display = ''; // Clear inline display
                 document.body.style.overflow = ''; // Restore scroll
             });
         }

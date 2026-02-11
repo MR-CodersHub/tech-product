@@ -11,22 +11,29 @@
 
 </head>
 
-<body class="font-[Inter] bg-[#0a0a0a] text-[#f9f9f9]">
+<body class="font-[Inter] bg-[#0a0a0a] text-[#f9f9f9] overflow-x-hidden w-full">
 
     <nav
-        class="flex justify-between items-center bg-black/90 backdrop-blur-sm px-10 py-8 w-full mx-auto fixed top-0 left-0 right-0 z-50">
-        <div class="text-2xl font-bold tracking-tighter"><a href="./index.html">COSMO<span
-                    class="text-blue-500">.</span></a></div>
+        class="flex justify-between items-center bg-black/90 backdrop-blur-sm px-6 md:px-10 py-6 md:py-8 w-full mx-auto fixed top-0 left-0 right-0 z-50 border-b border-white/5">
+        <div class="text-2xl font-bold tracking-tighter flex items-center gap-3">
+            <a href="./index.html" class="flex items-center gap-3">
+                <img src="./assets/img/logo.png" alt="Cosmo Logo" class="w-8 h-8 md:w-10 md:h-10 object-contain">
+                <span>COSMO<span class="text-blue-500">.</span></span>
+            </a>
+        </div>
 
-        <div class="hidden lg:flex space-x-10 text-sm font-medium text-gray-400">
+        <div class="hidden lg:flex items-center space-x-8 text-sm font-medium text-gray-400">
+            <a href="./index.html" class="hover:text-white transition">Home</a>
+            <a href="./home-2.html" class="hover:text-white transition">Audio</a>
+            <a href="./about.html" class="hover:text-white transition">About Us</a>
+
             <div class="relative group h-full flex items-center">
                 <button
                     class="hover:text-white transition flex items-center gap-1 outline-none py-2 group-hover:text-blue-400">
                     Categories
                     <svg class="w-3 h-3 transition-transform duration-300 group-hover:rotate-180 opacity-70" fill="none"
                         stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
-                        </path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                     </svg>
                 </button>
                 <div
@@ -89,11 +96,10 @@
                     </div>
                 </div>
             </div>
-            <a href="./home-2.html" class="hover:text-white transition mt-2">Audio</a>
-            <a href="./products.html" class="hover:text-white transition mt-2">Products</a>
-            <a href="./bestseller.html" class="hover:text-white transition mt-2">Best Sellers</a>
-            <a href="./about.html" class="hover:text-white transition mt-2">About us</a>
-            <a href="./contact.html" class="hover:text-white transition mt-2">Contact</a>
+
+            <a href="./products.html" class="hover:text-white transition">Products</a>
+            <a href="./bestseller.html" class="hover:text-white transition">Best Sellers</a>
+            <a href="./contact.html" class="hover:text-white transition">Contact</a>
         </div>
         <div class="hidden lg:flex items-center gap-6">
             <!-- Auth Desktop -->
@@ -129,72 +135,221 @@
     </nav>
 
     <!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden fixed inset-0 bg-[#0a0a0a] z-[9999] pt-20 px-6 overflow-y-auto">
-        <!-- Close Button -->
-        <button id="mobile-menu-close" class="absolute top-6 right-6 text-gray-400 hover:text-white z-[10000]">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-            </svg>
-        </button>
+    <div id="mobile-menu" class="hidden fixed inset-0 bg-[#0a0a0a] z-[9999] flex flex-col overflow-hidden">
+        <!-- Mobile Menu Header -->
+        <div class="flex justify-between items-center p-6 border-b border-white/5 bg-black/50 backdrop-blur-md">
+            <div class="flex items-center gap-3">
+                <img src="./assets/img/logo.png" alt="Cosmo Logo" class="w-8 h-8 object-contain">
+                <span class="text-xl font-bold tracking-tighter text-white uppercase font-[Inter]">Cosmo<span
+                        class="text-blue-500">.</span></span>
+            </div>
+            <button id="mobile-menu-close" class="p-2 text-gray-400 hover:text-white transition-colors">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                    </path>
+                </svg>
+            </button>
+        </div>
 
-        <div class="flex flex-col space-y-6 text-lg">
-            <div class="border-b border-white/10 pb-4">
-                <h5 class="text-xs uppercase tracking-widest text-gray-500 mb-4">Collections</h5>
-                <div class="grid grid-cols-2 gap-4">
-                    <a href="./category1.html" class="text-sm text-gray-300 hover:text-white">Wired Series</a>
-                    <a href="./category2.html" class="text-sm text-gray-300 hover:text-white">Earpods</a>
-                    <a href="./category3.html" class="text-sm text-gray-300 hover:text-white">Bluetooth</a>
-                    <a href="./category4.html" class="text-sm text-gray-300 hover:text-white">Headphones</a>
+        <!-- Scrollable Navigation -->
+        <div class="flex-1 overflow-y-auto px-6 py-8 custom-scrollbar">
+            <nav class="flex flex-col space-y-3">
+                <!-- Home -->
+                <a href="./index.html"
+                    class="flex items-center gap-4 px-4 py-4 rounded-2xl bg-blue-600/10 border border-blue-500/20 text-white transition-all group">
+                    <div class="w-10 h-10 rounded-xl bg-blue-500/20 flex items-center justify-center text-blue-400">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6">
+                            </path>
+                        </svg>
+                    </div>
+                    <span class="font-bold tracking-tight">Home</span>
+                </a>
+
+                <!-- Main Pages Group -->
+                <div class="grid grid-cols-2 gap-3 py-2">
+                    <a href="./home-2.html"
+                        class="flex flex-col items-center justify-center gap-2 p-4 rounded-2xl bg-white/[0.03] border border-white/5 text-gray-400 hover:text-white hover:bg-white/5 transition-all group">
+                        <div
+                            class="w-10 h-10 rounded-xl bg-purple-500/10 flex items-center justify-center text-purple-400 group-hover:scale-110 transition-transform">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3">
+                                </path>
+                            </svg>
+                        </div>
+                        <span class="text-xs font-semibold">Audio</span>
+                    </a>
+                    <a href="./products.html"
+                        class="flex flex-col items-center justify-center gap-2 p-4 rounded-2xl bg-white/[0.03] border border-white/5 text-gray-400 hover:text-white hover:bg-white/5 transition-all group">
+                        <div
+                            class="w-10 h-10 rounded-xl bg-yellow-500/10 flex items-center justify-center text-yellow-400 group-hover:scale-110 transition-transform">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M16 11V7a4 4 0 11-8 0v4M5 9h14l1 12H4L5 9z"></path>
+                            </svg>
+                        </div>
+                        <span class="text-xs font-semibold">Products</span>
+                    </a>
+                    <a href="./bestseller.html"
+                        class="flex flex-col items-center justify-center gap-2 p-4 rounded-2xl bg-white/[0.03] border border-white/5 text-gray-400 hover:text-white hover:bg-white/5 transition-all group">
+                        <div
+                            class="w-10 h-10 rounded-xl bg-orange-500/10 flex items-center justify-center text-orange-400 group-hover:scale-110 transition-transform">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z">
+                                </path>
+                            </svg>
+                        </div>
+                        <span class="text-xs font-semibold">Bestsellers</span>
+                    </a>
+                    <a href="./about.html"
+                        class="flex flex-col items-center justify-center gap-2 p-4 rounded-2xl bg-white/[0.03] border border-white/5 text-gray-400 hover:text-white hover:bg-white/5 transition-all group">
+                        <div
+                            class="w-10 h-10 rounded-xl bg-green-500/10 flex items-center justify-center text-green-400 group-hover:scale-110 transition-transform">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                        <span class="text-xs font-semibold">About Us</span>
+                    </a>
                 </div>
-            </div>
 
-            <a href="./home-2.html" class="border-b border-white/10 pb-4 text-gray-300 hover:text-white">Audio</a>
-            <a href="./products.html" class="border-b border-white/10 pb-4 text-gray-300 hover:text-white">Products</a>
-            <a href="./bestseller.html" class="border-b border-white/10 pb-4 text-gray-300 hover:text-white">Best
-                Sellers</a>
-            <a href="./about.html" class="border-b border-white/10 pb-4 text-gray-300 hover:text-white">About Us</a>
-            <a href="./contact.html" class="border-b border-white/10 pb-4 text-gray-300 hover:text-white">Contact</a>
+                <!-- Categories -->
+                <div class="py-2">
+                    <div
+                        class="px-4 py-3 flex items-center gap-2 text-[10px] font-bold text-gray-500 uppercase tracking-[0.2em] select-none">
+                        <svg class="w-3 h-3 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                        Collections
+                    </div>
+                    <div class="grid grid-cols-2 gap-3 px-2">
+                        <a href="./category1.html"
+                            class="flex items-center gap-3 p-3 rounded-xl bg-white/[0.02] border border-white/5 text-[11px] text-gray-400 hover:text-white transition-colors">
+                            <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span> Wired Series
+                        </a>
+                        <a href="./category2.html"
+                            class="flex items-center gap-3 p-3 rounded-xl bg-white/[0.02] border border-white/5 text-[11px] text-gray-400 hover:text-white transition-colors">
+                            <span class="w-1.5 h-1.5 rounded-full bg-purple-500"></span> Earpods
+                        </a>
+                        <a href="./category3.html"
+                            class="flex items-center gap-3 p-3 rounded-xl bg-white/[0.02] border border-white/5 text-[11px] text-gray-400 hover:text-white transition-colors">
+                            <span class="w-1.5 h-1.5 rounded-full bg-pink-500"></span> Bluetooth
+                        </a>
+                        <a href="./category4.html"
+                            class="flex items-center gap-3 p-3 rounded-xl bg-white/[0.02] border border-white/5 text-[11px] text-gray-400 hover:text-white transition-colors">
+                            <span class="w-1.5 h-1.5 rounded-full bg-indigo-500"></span> Over-Ear
+                        </a>
+                    </div>
+                </div>
 
-            <!-- Mobile Auth Section -->
-            <div id="auth-mobile" class="pt-2 border-b border-white/10 pb-4">
-                <!-- Injected by JS -->
-            </div>
+                <!-- Support & Legal -->
+                <div class="py-2">
+                    <div
+                        class="px-4 py-3 flex items-center gap-2 text-[10px] font-bold text-gray-500 uppercase tracking-[0.2em] select-none">
+                        <svg class="w-3 h-3 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4">
+                            </path>
+                        </svg>
+                        Information
+                    </div>
+                    <div class="flex flex-col space-y-1 px-2">
+                        <a href="./faq.html"
+                            class="flex items-center justify-between px-4 py-3 rounded-xl hover:bg-white/5 transition-all text-sm text-gray-400 hover:text-white">
+                            <span>Frequently Asked Questions</span>
+                            <svg class="w-4 h-4 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+                                </path>
+                            </svg>
+                        </a>
+                        <a href="./tos.html"
+                            class="flex items-center justify-between px-4 py-3 rounded-xl hover:bg-white/5 transition-all text-sm text-gray-400 hover:text-white">
+                            <span>Terms of Service</span>
+                            <svg class="w-4 h-4 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+                                </path>
+                            </svg>
+                        </a>
+                        <a href="./policy.html"
+                            class="flex items-center justify-between px-4 py-3 rounded-xl hover:bg-white/5 transition-all text-sm text-gray-400 hover:text-white">
+                            <span>Privacy Policy</span>
+                            <svg class="w-4 h-4 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+                                </path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
 
+                <!-- Contact Nav -->
+                <a href="./contact.html"
+                    class="flex items-center gap-4 px-4 py-4 rounded-2xl bg-white/[0.03] border border-white/5 text-gray-300 hover:text-white hover:bg-white/5 transition-all group">
+                    <div
+                        class="w-10 h-10 rounded-xl bg-pink-500/10 flex items-center justify-center text-pink-400 group-hover:scale-110 transition-transform">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                            </path>
+                        </svg>
+                    </div>
+                    <span class="font-semibold tracking-tight">Contact Us</span>
+                </a>
+            </nav>
+        </div>
+
+        <!-- Mobile Menu Footer -->
+        <div class="p-6 border-t border-white/5 bg-black/50 backdrop-blur-md space-y-4">
             <a href="./booking.html"
-                class="w-full py-4 bg-blue-600 rounded-xl text-center font-bold hover:bg-blue-700 transition mt-4">Order
-                Now</a>
+                class="w-full flex items-center justify-center gap-3 py-4 bg-blue-600 rounded-2xl font-bold text-white hover:bg-blue-700 transition-all shadow-lg shadow-blue-600/20 active:scale-[0.98]">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2M3 19v-8a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z">
+                    </path>
+                </svg>
+                Order Now
+            </a>
+
+            <div id="auth-mobile" class="grid grid-cols-2 gap-4">
+                <!-- Injected by JS: Login / Signup -->
+            </div>
         </div>
     </div>
 
     <script src="./js/main.js"></script>
 
 
-    <section class="max-w-7xl mx-auto px-6 py-48 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-        <div>
-            <h1 class="text-6xl md:text-8xl font-bold leading-tight mb-6">Immersive <br><span
+    <section
+        class="max-w-7xl mx-auto px-6 pt-32 pb-20 lg:py-48 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center overflow-hidden">
+        <div class="text-center lg:text-left flex flex-col items-center lg:items-start">
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold leading-tight mb-6">Immersive <br><span
                     class="text-gray-500">Sound.</span></h1>
-            <p class="text-xl text-gray-400 mb-10 max-w-md">Premium audio hardware designed for enthusiasts,
-                professionals, and the modern lifestyle. [cite: 6, 9]</p>
-            <div class="flex gap-4">
+            <p class="text-lg md:text-xl text-gray-400 mb-10 max-w-md">Premium audio hardware designed for enthusiasts,
+                professionals, and the modern lifestyle.</p>
+            <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
                 <a href="./booking.html"
-                    class="px-8 py-4 bg-gradient-to-br from-blue-600 to-violet-600 rounded-xl font-bold hover:opacity-90 transition">Buy
+                    class="px-8 py-4 bg-gradient-to-br from-blue-600 to-violet-600 rounded-xl font-bold hover:opacity-90 transition text-center">Buy
                     Now</a>
                 <a href="#order"
-                    class="px-8 py-4 bg-white/5 backdrop-blur-md border border-white/10 rounded-xl font-bold hover:bg-white/10 transition">Pre-Order</a>
+                    class="px-8 py-4 bg-white/5 backdrop-blur-md border border-white/10 rounded-xl font-bold hover:bg-white/10 transition text-center">Pre-Order</a>
             </div>
         </div>
         <div class="relative flex justify-center">
             <div class="absolute inset-0 bg-blue-500/20 blur-[100px] rounded-full"></div>
             <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=1000&auto=format&fit=crop"
                 alt="Premium Headphones"
-                class="relative z-10 rounded-2xl shadow-2xl transform hover:scale-105 transition duration-500">
+                class="relative z-10 rounded-2xl shadow-2xl transform hover:scale-105 transition duration-500 max-w-full h-auto">
         </div>
     </section>
     <section class="max-w-7xl mx-auto px-8 py-24">
 
         <div class="max-w-3xl mb-16 mx-auto text-center">
             <h2 class="text-xs uppercase tracking-[0.5em] text-blue-500 font-bold mb-4">Core Principles</h2>
-            <h3 class="text-4xl md:text-5xl font-bold mb-6 tracking-tight">Why <span
+            <h3 class="text-3xl md:text-5xl font-bold mb-6 tracking-tight">Why <span
                     class="bg-gradient-to-br from-blue-500 to-violet-500 bg-clip-text text-transparent">Cosmo.</span>
             </h3>
             <p class="text-gray-400 text-lg font-light leading-relaxed  justify-center">
@@ -317,7 +472,7 @@
         <div class="max-w-7xl mx-auto px-6 pb-32">
 
             <div class="max-w-4xl mx-auto text-center py-20 px-6">
-                <h1 id="collections" class="text-5xl md:text-6xl font-bold mb-6 tracking-tight">Our Collections</h1>
+                <h1 id="collections" class="text-4xl md:text-6xl font-bold mb-6 tracking-tight">Our Collections</h1>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 
@@ -372,7 +527,7 @@
 
         <div class="text-center mb-16">
             <h2 class="text-xs uppercase tracking-[0.5em] text-blue-500 font-bold mb-4">Authentic Feedback</h2>
-            <h3 class="text-4xl md:text-5xl font-bold mb-6">What Our Customers Say</h3>
+            <h3 class="text-3xl md:text-5xl font-bold mb-6">What Our Customers Say</h3>
             <p class="text-gray-400 text-lg max-w-xl mx-auto font-light">
                 Real experiences from music lovers, professionals, and travelers who chose Aura for their daily sound.
             </p>
@@ -426,42 +581,65 @@
 
             <div class="lg:col-span-5 flex flex-col gap-8">
                 <div
-                    class="bg-white/[0.02] border border-white/5 transition-all duration-300 hover:border-blue-500 hover:bg-white/5 hover:-translate-y-1 p-8 rounded-[2rem]">
-                    <div class="flex gap-1 mb-4 text-sm text-yellow-500"></div>
-                    <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
-                        <path
-                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                    </svg>
-                    <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
-                        <path
-                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                    </svg>
-                    <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
-                        <path
-                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                    </svg>
-                    <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
-                        <path
-                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                    </svg>
-                    <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
-                        <path
-                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                    </svg>
-                </div>
-                <p class="text-gray-300 italic mb-6">"Zero latency is a must for my production work. The Wired
-                    series delivers pure, uncolored audio every time."</p>
-                <div class="flex items-center gap-3">
+                    class="relative group bg-[#0a0a0a] border border-white/5 p-8 rounded-[2rem] overflow-hidden transition-all duration-300 hover:border-blue-500/50 hover:shadow-[0_0_30px_rgba(59,130,246,0.1)]">
+                    <!-- Glow Effect -->
                     <div
-                        class="w-10 h-10 rounded-full bg-gradient-to-tr from-blue-900 to-purple-800 flex items-center justify-center text-xs font-bold">
-                        DK</div>
-                    <div>
-                        <p class="text-sm font-bold">David K. • Studio Engineer</p>
-                        <p class="text-[10px] text-gray-500 uppercase">Wired Pro Series</p>
+                        class="absolute top-0 right-0 w-32 h-32 bg-blue-500/10 blur-[50px] rounded-full pointer-events-none">
+                    </div>
+
+                    <div class="relative z-10">
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="flex gap-1 text-blue-400 drop-shadow-[0_0_8px_rgba(96,165,250,0.5)]">
+                                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                                    <path
+                                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                                    <path
+                                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                                    <path
+                                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                                    <path
+                                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                                    <path
+                                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                            </div>
+                            <div class="p-2 bg-blue-500/10 rounded-full text-blue-400">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                            </div>
+                        </div>
+
+                        <p class="text-gray-200 text-lg font-light leading-relaxed mb-6">"Zero latency is a must for my
+                            production work. The <span class="text-blue-400 font-semibold">Wired series</span> delivers
+                            pure, uncolored audio every time."</p>
+
+                        <div class="flex items-center gap-4">
+                            <div class="relative">
+                                <div
+                                    class="w-12 h-12 rounded-full bg-gradient-to-br from-gray-800 to-black border border-white/10 flex items-center justify-center text-sm font-bold text-gray-300">
+                                    DK</div>
+                                <div
+                                    class="absolute -bottom-1 -right-1 w-4 h-4 bg-green-500 rounded-full border-2 border-black">
+                                </div>
+                            </div>
+                            <div>
+                                <p class="font-bold text-white text-sm">David K.</p>
+                                <p class="text-[10px] text-gray-500 uppercase tracking-wider font-semibold">Studio
+                                    Engineer</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="lg:col-span-5 flex flex-col gap-8">
                 <div
                     class="bg-white/[0.02] border border-white/5 transition-all duration-300 hover:border-blue-500 hover:bg-white/5 hover:-translate-y-1 p-8 rounded-[2rem]">
                     <div class="flex gap-1 mb-4 text-sm text-yellow-500">
@@ -486,8 +664,7 @@
                                 d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                         </svg>
                     </div>
-                    <p class="text-gray-300 italic mb-6">"Finally, Bluetooth earphones that stay secure during my
-                        runs
+                    <p class="text-gray-300 italic mb-6">"Finally, Bluetooth earphones that stay secure during my runs
                         and actually last the whole week on one charge."</p>
                     <div class="flex items-center gap-3">
                         <div
@@ -500,7 +677,6 @@
                     </div>
                 </div>
             </div>
-        </div>
     </section>
 
     <section id="order" class="relative py-32 overflow-hidden text-white">
@@ -516,7 +692,7 @@
                         class="inline-block px-4 py-1 mb-4 text-[10px] font-bold tracking-[0.3em] text-blue-400 uppercase bg-blue-400/10 border border-blue-400/20 rounded-full">
                         Limited Production Run
                     </span>
-                    <h2 class="text-4xl md:text-5xl font-bold mb-4 tracking-tight">Reserve Your Pair</h2>
+                    <h2 class="text-3xl md:text-5xl font-bold mb-4 tracking-tight">Reserve Your Pair</h2>
                     <p class="text-gray-400 max-w-md mx-auto leading-relaxed">
                         Only 500 units available for the first production run. Secure yours before the global launch.
                     </p>

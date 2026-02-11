@@ -9,12 +9,6 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #0a0a0a;
-            color: #e4e4e7;
-        }
-
         .sidebar-item {
             transition: all 0.2s;
             border-left: 3px solid transparent;
@@ -48,14 +42,27 @@
             text-transform: uppercase;
         }
     </style>
+</head>
+
+<body class="font-[Inter] bg-[#0a0a0a] text-[#e4e4e7] overflow-x-hidden min-h-screen">
     <div id="admin-content" style="display: none;" class="flex min-h-screen w-full">
         <aside class="w-64 bg-[#111114] border-r border-zinc-800 flex flex-col">
-            <div class="p-6 border-b border-zinc-800">
-                <span class="text-xl font-bold tracking-tighter text-white">COSMO <span
-                        class="text-blue-500 font-light">ADMIN</span></span>
+            <div class="p-6 border-b border-zinc-800 flex items-center gap-3">
+                <img src="./assets/img/logo.png" alt="Cosmo Logo" class="w-8 h-8 object-contain">
+                <span class="text-xl font-bold tracking-tighter text-white">COSMO<span
+                        class="text-blue-500">.</span></span>
             </div>
 
             <nav class="flex-1 py-4">
+                <a href="./index.html"
+                    class="sidebar-item flex items-center gap-3 px-6 py-3 text-zinc-400 hover:text-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                    </svg>
+                    Home
+                </a>
                 <div class="px-6 py-2 text-[10px] font-bold text-zinc-500 uppercase tracking-widest">Main</div>
                 <a href="#" class="sidebar-item active flex items-center gap-3 px-6 py-3">Overview</a>
                 <a href="./products.html" class="sidebar-item flex items-center gap-3 px-6 py-3">Products</a>
@@ -82,7 +89,7 @@
                     <div class="flex items-center gap-3 border-l border-zinc-800 pl-6">
                         <div class="text-right">
                             <p class="text-xs font-bold text-white">Admin </p>
-                            
+
                         </div>
                         <div class="w-8 h-8 rounded-lg bg-blue-600 flex items-center justify-center font-bold text-xs">A
                         </div>
@@ -128,7 +135,7 @@
                     <div class="xl:col-span-2 bg-[#18181b] rounded-2xl border border-zinc-800 overflow-hidden">
                         <div class="p-6 border-b border-zinc-800 flex justify-between items-center">
                             <h3 class="font-bold">Recent Booking Requests</h3>
-                            
+
                         </div>
                         <div class="overflow-x-auto">
                             <table class="w-full text-left data-table">
@@ -148,27 +155,27 @@
                         </div>
                     </div>
 
-                        <div class="bg-[#18181b] p-6 rounded-2xl border border-zinc-800">
-                            <h3 class="font-bold mb-4 text-sm uppercase tracking-widest">System Health</h3>
-                            <div class="space-y-3">
-                                <div class="flex justify-between text-xs">
-                                    <span class="text-zinc-500">Database Sync</span>
-                                    <span class="text-green-500">Optimal</span>
-                                </div>
-                                <div class="flex justify-between text-xs">
-                                    <span class="text-zinc-500">SSL Certificate</span>
-                                    <span class="text-green-500">Active</span>
-                                </div>
-                                <div class="flex justify-between text-xs">
-                                    <span class="text-zinc-500">Server Response</span>
-                                    <span class="text-zinc-300">120ms</span>
-                                </div>
+                    <div class="bg-[#18181b] p-6 rounded-2xl border border-zinc-800">
+                        <h3 class="font-bold mb-4 text-sm uppercase tracking-widest">System Health</h3>
+                        <div class="space-y-3">
+                            <div class="flex justify-between text-xs">
+                                <span class="text-zinc-500">Database Sync</span>
+                                <span class="text-green-500">Optimal</span>
+                            </div>
+                            <div class="flex justify-between text-xs">
+                                <span class="text-zinc-500">SSL Certificate</span>
+                                <span class="text-green-500">Active</span>
+                            </div>
+                            <div class="flex justify-between text-xs">
+                                <span class="text-zinc-500">Server Response</span>
+                                <span class="text-zinc-300">120ms</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </main>
+    </div>
+    </main>
     </div>
 
     <script>
@@ -213,8 +220,6 @@
             window.location.href = 'login.html';
         }
     </script>
-    </body>
-
-</html>
+</body>
 
 </html>
